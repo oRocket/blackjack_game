@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker Cards</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="welcome-section"></div>
+    <div id="sum-section">Sum: 0</div>
+    <div class="card-container" id="card-container"></div>
+    <button id="restart-button">Restart Game</button>
+
+    <!-- Game Rules Modal -->
+    <div class="modal" id="rules-modal">
+        <h2>Game Rules</h2>
+        <p>The goal of the game is to reach a total of 21 by selecting cards. <span>If you reach exactly 21, you win. </span>If your total exceeds 21, you lose the game. You can restart the game at any time.</p>
+        <button id="start-game-button">Start Game</button>
+    </div>
+
+    <!-- Username Prompt Modal -->
+    <div class="username-modal" id="username-modal">
+        <h2>Please Enter Your Name</h2>
+        <input type="text" id="username-input" placeholder="Enter your name">
+        <button id="submit-username-button">Submit</button>
+    </div>
+
+    <!-- Custom Popup -->
+    <div class="popup" id="popup">
+        <h2 id="popup-message"></h2>
+        <button id="popup-button">OK</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

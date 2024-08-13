@@ -1,0 +1,285 @@
+body {
+    background-image: url('../image/table.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+@font-face {
+    font-family: 'PokerKings';
+    src: url('../fonts/PokerKings-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blue Spirits';
+    src: url('../fonts/Blue Spirits.otf') format('opentype');
+    font-weight: light;
+    font-style: normal;
+}
+
+span {
+    color:#f00;
+    font-weight: bold;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 10;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 155px;
+    height: 250px;
+    margin: 8px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card:hover .card-inner {
+    cursor: pointer;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.card-front {
+    background-image: url('../cards/cover.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-back {
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+#welcome-section {
+    font-family: 'PokerKings', sans-serif;
+    font-size: 2.4rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+#sum-section {
+    font-family: 'Blue Spirits', sans-serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+#restart-button {
+    display: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Game Rules Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 100;
+    text-align: center;
+    color: #fff;
+}
+
+.modal h2 {
+    font-family: 'Blue Spirits', sans-serif;
+    margin: 0 0 20px;
+    font-size: 1.8rem;
+}
+
+.modal p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.modal button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #00f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Username Prompt Modal Styles */
+.username-modal {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 100;
+    text-align: center;
+    color: #fff;
+}
+
+.username-modal input {
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.username-modal button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #00f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Custom Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 100;
+    text-align: center;
+    color: #fff;
+}
+
+.popup h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 0 20px;
+    font-size: 1.7rem;
+}
+
+.popup button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #00f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 380px) {
+    .modal {
+        width: 80%;
+    }
+    .popup {
+        width: 80%;
+    }
+    .card-container {
+        justify-content: center;
+        z-index: 10;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .card {
+        width: 100%;
+        max-width: 70px;
+        max-height: 110px;
+    }
+    #welcome-section {
+    color: #fff;
+    margin-top: 3%;
+    }
+    .popup {
+        width: 60%;
+    }
+}
+
+@media (min-width: 380px) and (max-width: 767px) {
+    .modal {
+        width: 80%;
+    }
+    .popup {
+        width: 80%;
+    }
+    .card-container {
+        justify-content: center;
+        z-index: 10;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .card {
+        width: 100%;
+        max-width: 80px;
+        max-height: 130px;
+    }
+    #welcome-section {
+    color: #fff;
+    margin-top: 10%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .modal {
+        width: 80%;
+    }
+    .popup {
+        width: 80%;
+    }
+    .card-container {
+        justify-content: center;
+        z-index: 10;
+        margin-bottom: 30px;
+        width: 90%;
+    }
+    .card {
+        width: 100%;
+        max-width: 120px;
+        max-height: 200px;
+    }
+    #welcome-section {
+    color: #fff;
+    margin-top: 20%;
+    }
+}

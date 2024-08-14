@@ -65,7 +65,7 @@ function initializeGame() {
                 sumSection.textContent = `Sum: ${currentSum}`;
 
                 if (currentSum === 21) {
-                    showPopup(`Blackjack! You win! ${userName} 🥳`);
+                    showPopup(`Blackjack! You win! ${userName} 🎉`);
                     gameOver = true;
                     restartButton.style.display = 'block';
                 } else if (currentSum > 21) {

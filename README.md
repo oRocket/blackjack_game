@@ -1,4 +1,4 @@
-# Poker Cards Game
+# Blackjack Game
 
 This is a simple interactive poker card game where the objective is to reach a sum of 21 by selecting cards. If your total matches exactly 21, you win the game with a "Blackjack!" message. However, if your total exceeds 21, you lose the game. The game is designed to be responsive, adjusting to smaller screens with a width of 768px or less.
 

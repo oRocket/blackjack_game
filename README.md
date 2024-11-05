@@ -2,6 +2,17 @@
 
 This is a simple interactive poker card game where the objective is to reach a sum of 21 by selecting cards. If your total matches exactly 21, you win the game with a "Blackjack!" message. However, if your total exceeds 21, you lose the game. The game is designed to be responsive, adjusting to smaller screens with a width of 768px or less.
 
+## Screenshot
+
+![Game Screenshot](image/interface.jpg)  
+*Screenshot of the game interface.*
+
+
+## Play the Game
+
+Click here to play: [Blackjack Game](https://albert-blackjack-game.netlify.app/)
+
+
 ## Technologies Used
 
 - **HTML**: For structuring the game layout.
@@ -29,6 +40,7 @@ This is a simple interactive poker card game where the objective is to reach a s
 
 - **Name**: Albert Opoku-Twumasi
 - **GitHub**: [oRocket](https://github.com/orocket)
+- **Linkedin**: [Albert Opoku-Twumasi](https://www.linkedin.com/in/albert-opoku-twumasi-a4694b280/)
 - **Twitter/X**: [@Albert_O_T](https://twitter.com/Albert_O_T)
 
 Enjoy playing the Poker Cards Game and try your luck at hitting Blackjack!
